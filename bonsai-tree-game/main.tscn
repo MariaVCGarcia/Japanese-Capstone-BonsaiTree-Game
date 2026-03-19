@@ -1,35 +1,33 @@
 [gd_scene format=3 uid="uid://bk31xcgp1e8ha"]
 
 [ext_resource type="Script" uid="uid://ndgtkv3nr02w" path="res://MouseCursor.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://w20ixksfdftc" path="res://game assets/game assets _14.jpg" id="2_0xm2m"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ig7tw"]
-load_path = "res://.godot/imported/game assets _1.jpg-015b533937ba6f143149a672db109eac.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0xm2m"]
-load_path = "res://.godot/imported/game assets _8.jpg-c3ad5a23b996a664e5ea3fd3eec66f30.ctex"
+[ext_resource type="Texture2D" uid="uid://cgllxgydubohl" path="res://game assets/game assets _1.jpg" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=939702465]
 script = ExtResource("1_ig7tw")
 
 [node name="Game_CanvasLayer" type="CanvasLayer" parent="." unique_id=1881389670]
 
-[node name="Tabel" type="Sprite2D" parent="Game_CanvasLayer" unique_id=1505502771]
-position = Vector2(578.12476, 551.5)
-scale = Vector2(0.29314572, 0.14614244)
-texture = SubResource("CompressedTexture2D_ig7tw")
+[node name="ColorRect" type="ColorRect" parent="Game_CanvasLayer" unique_id=1481124544]
+z_index = -4096
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.508368, 0.7387411, 0.9657386, 0.29411766)
 metadata/_edit_lock_ = true
 
-[node name="pot" type="Sprite2D" parent="Game_CanvasLayer" unique_id=1479299854]
-position = Vector2(596.17896, 448.03134)
-rotation = -1.5707964
-scale = Vector2(0.51453996, 1.0000001)
-texture = SubResource("CompressedTexture2D_0xm2m")
+[node name="TextureRect" type="TextureRect" parent="Game_CanvasLayer" unique_id=1398852376]
+offset_left = 3.0
+offset_top = 535.0
+offset_right = 1154.0
+offset_bottom = 650.0
+mouse_filter = 2
+texture = ExtResource("2_0xm2m")
+expand_mode = 3
 metadata/_edit_lock_ = true
 
 [node name="UI_CanvasLayer" type="CanvasLayer" parent="." unique_id=449070095]
-
-[node name="NinePatchRect" type="NinePatchRect" parent="UI_CanvasLayer" unique_id=1152889679]
-offset_right = 1145.0
-offset_bottom = 214.0
-texture = ExtResource("2_0xm2m")
