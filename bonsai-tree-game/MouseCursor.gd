@@ -1,6 +1,7 @@
 extends Node2D
 
-const GAME_ASSETS__10 = preload("uid://cc4s6up5mwyba")
+const GAME_ASSETS__10 = preload("uid://c6n6egph8k6m7")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
