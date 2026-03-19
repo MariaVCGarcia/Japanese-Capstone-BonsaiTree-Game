@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://ctyplfo6q7p25"]
+
+[ext_resource type="Script" uid="uid://cp8gv3nv2pc3r" path="res://main_menu_Mouse_Cursor.tscn.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://b2a17kpbesj8u" path="res://icon.svg" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
+texture = ExtResource("2_7vrkn")
+modulate_color = Color(0.41598046, 0.41598043, 0.4159804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+bg_color = Color(0.012270532, 0.24433994, 0.14551595, 1)
+
+[node name="Main_Menu" type="Control" unique_id=786322334]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 4.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Panel" type="Panel" parent="." unique_id=1713387303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fu7sn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1793920871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.75
+offset_top = -55.0
+offset_right = 140.75
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1436175838]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+text = "new game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1132246584]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+text = "settings "
+
+[node name="Label" type="Label" parent="." unique_id=148442641]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.5
+offset_right = 72.5
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 57
+text = "Bonsai Tree Game "
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_New_Game_pressed"]
