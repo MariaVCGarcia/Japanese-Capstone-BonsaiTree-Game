@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://ctyplfo6q7p25"]
 
-[ext_resource type="Script" uid="uid://cp8gv3nv2pc3r" path="res://main_menu_Mouse_Cursor.tscn.gd" id="1_06t4h"]
-[ext_resource type="Texture2D" uid="uid://b2a17kpbesj8u" path="res://icon.svg" id="2_7vrkn"]
+[ext_resource type="Script" uid="uid://cp8gv3nv2pc3r" path="res://scripts/main_menu_Mouse_Cursor.tscn.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://b2a17kpbesj8u" path="res://game assets/icon.svg" id="2_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fu7sn"]
-texture = ExtResource("2_7vrkn")
+texture = ExtResource("2_bqqt6")
 modulate_color = Color(0.41598046, 0.41598043, 0.4159804, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
@@ -21,7 +21,7 @@ offset_right = 4.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06t4h")
+script = ExtResource("1_ekxnf")
 
 [node name="Panel" type="Panel" parent="." unique_id=1713387303]
 layout_mode = 1

@@ -13,7 +13,11 @@ config_version=5
 config/name="Bonsai Tree Game"
 run/main_scene="uid://ctyplfo6q7p25"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://game assets/icon.svg"
+
+[autoload]
+
+Global="*uid://b6tq8pkrmdj5t"
 
 [display]
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bk31xcgp1e8ha"]
 
-[ext_resource type="Script" uid="uid://ndgtkv3nr02w" path="res://MouseCursor.gd" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://cgllxgydubohl" path="res://game assets/game assets _1.jpg" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://ndgtkv3nr02w" path="res://scripts/MouseCursor.gd" id="1_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://cgllxgydubohl" path="res://game assets/game assets _1.jpg" id="2_sugp2"]
 
 [node name="Main" type="Node2D" unique_id=939702465]
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_0wfyh")
 
 [node name="Game_CanvasLayer" type="CanvasLayer" parent="." unique_id=1881389670]
 
@@ -26,7 +26,7 @@ offset_top = 535.0
 offset_right = 1154.0
 offset_bottom = 650.0
 mouse_filter = 2
-texture = ExtResource("2_0xm2m")
+texture = ExtResource("2_sugp2")
 expand_mode = 3
 metadata/_edit_lock_ = true
 
