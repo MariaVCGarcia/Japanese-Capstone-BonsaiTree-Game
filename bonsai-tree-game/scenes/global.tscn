@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://ddi8vqvjumtcw"]
 
-[ext_resource type="Script" uid="uid://b6tq8pkrmdj5t" path="res://scripts/global.gd" id="1_4pk28"]
+[ext_resource type="Script" uid="uid://ch1iloofbwg2w" path="res://scripts/global.gd" id="1_4pk28"]
+[ext_resource type="PackedScene" uid="uid://ctyplfo6q7p25" path="res://scenes/main_menu.tscn" id="2_opebo"]
+[ext_resource type="PackedScene" uid="uid://bk31xcgp1e8ha" path="res://scenes/main.tscn" id="3_m3l3d"]
 
 [node name="Global" type="Node" unique_id=1420405510]
 script = ExtResource("1_4pk28")
+
+[node name="Main_Menu" parent="." unique_id=786322334 instance=ExtResource("2_opebo")]
+
+[node name="Main" parent="." unique_id=939702465 instance=ExtResource("3_m3l3d")]

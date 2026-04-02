@@ -21,6 +21,7 @@ offset_right = 4.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_ekxnf")
 
 [node name="Panel" type="Panel" parent="." unique_id=1713387303]

@@ -6,12 +6,11 @@ const GAME_ASSETS__10 = preload("uid://c6n6egph8k6m7")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Input.set_custom_mouse_cursor(GAME_ASSETS__10,Input.CURSOR_POINTING_HAND)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+	
+func _process(_delta: float) -> void:
 	pass
-
-
-func _on_New_Game_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+func _unhandled_event(event:InputEvent) -> void:
+	if event.is_pressed():
+		#get_tree().change_scene_to_file("res://scenes/main.tscn")
+		Global.game_controller.Change_Main_scene("res://scenes/main.tscn")
+	
