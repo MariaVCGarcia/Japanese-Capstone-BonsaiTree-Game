@@ -9,7 +9,6 @@ script = ExtResource("1_0wfyh")
 [node name="Game_CanvasLayer" type="CanvasLayer" parent="." unique_id=1881389670]
 
 [node name="ColorRect" type="ColorRect" parent="Game_CanvasLayer" unique_id=1481124544]
-z_index = -4096
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

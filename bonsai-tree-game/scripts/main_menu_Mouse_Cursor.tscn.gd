@@ -9,8 +9,10 @@ func _ready() -> void:
 	
 func _process(_delta: float) -> void:
 	pass
-func _unhandled_event(event:InputEvent) -> void:
-	if event.is_pressed():
-		#get_tree().change_scene_to_file("res://scenes/main.tscn")
-		Global.game_controller.Change_Main_scene("res://scenes/main.tscn")
+func on_start_pressed():
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
+
+
+func _on_start_pressed() -> void:
+	pass # Replace with function body.

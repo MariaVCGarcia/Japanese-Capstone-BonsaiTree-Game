@@ -15,10 +15,6 @@ run/main_scene="uid://ctyplfo6q7p25"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://game assets/icon.svg"
 
-[autoload]
-
-Global="*uid://ddi8vqvjumtcw"
-
 [display]
 
 mouse_cursor/custom_image="uid://u266c7snbtdx"
