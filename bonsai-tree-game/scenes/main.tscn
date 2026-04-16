@@ -75,8 +75,6 @@ step = 2.0
 value = 100.0
 fill_mode = 1
 
-[node name="Timer" type="Timer" parent="UI_CanvasLayer/VBoxContainer" unique_id=1161801793]
-
 [node name="pause" type="TextureButton" parent="UI_CanvasLayer" unique_id=137944954]
 anchors_preset = 1
 anchor_left = 1.0
