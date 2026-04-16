@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://1m36bhx7mfrt"]
+
+[ext_resource type="Script" uid="uid://dgiu47vr7hhei" path="res://scripts/pausemenue.gd" id="1_0dkoo"]
+
+[node name="pausemenue" type="Control" unique_id=1810335632]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0dkoo")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1814647529]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -179.5
+offset_right = 179.5
+offset_bottom = 529.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1416034632]
+layout_mode = 2
+theme_override_constants/separation = 39
+alignment = 1
+
+[node name="return" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1677772899]
+layout_mode = 2
+text = "return "
+
+[node name="save" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1526611705]
+layout_mode = 2
+text = "save"
+
+[node name="quit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=410628670]
+layout_mode = 2
+text = "quit
+"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]

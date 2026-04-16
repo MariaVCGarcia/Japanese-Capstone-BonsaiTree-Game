@@ -76,3 +76,14 @@ value = 100.0
 fill_mode = 1
 
 [node name="Timer" type="Timer" parent="UI_CanvasLayer/VBoxContainer" unique_id=1161801793]
+
+[node name="pause" type="TextureButton" parent="UI_CanvasLayer" unique_id=137944954]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -128.0
+offset_bottom = 128.0
+grow_horizontal = 0
+texture_normal = ExtResource("4_jyhfs")
+
+[connection signal="pressed" from="UI_CanvasLayer/pause" to="." method="_on_pause_pressed"]

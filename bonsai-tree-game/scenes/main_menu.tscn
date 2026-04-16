@@ -46,7 +46,7 @@ offset_right = 140.75
 offset_bottom = 142.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 7
+theme_override_constants/separation = 10
 
 [node name="start" type="Button" parent="VBoxContainer" unique_id=1436175838]
 layout_mode = 2
