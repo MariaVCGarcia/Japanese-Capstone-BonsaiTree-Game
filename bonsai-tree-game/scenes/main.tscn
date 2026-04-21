@@ -2,8 +2,15 @@
 
 [ext_resource type="Script" uid="uid://ndgtkv3nr02w" path="res://scripts/MouseCursor.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://cgllxgydubohl" path="res://game assets/game assets _1.jpg" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://birtrbvlsn6ww" path="res://game assets/game assets  - Page 11.jpg" id="2_tipki"]
 [ext_resource type="Texture2D" uid="uid://w20ixksfdftc" path="res://game assets/game assets _14.jpg" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://b2a17kpbesj8u" path="res://game assets/icon.svg" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://bmq2v2empg4p2" path="res://scripts/Water.gd" id="4_tefeu"]
+[ext_resource type="Script" uid="uid://bp1c3hudtvesu" path="res://scripts/pause_button.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://ddubv4ilxgid2" path="res://scripts/growth.gd" id="6_o6xl0"]
+[ext_resource type="Script" uid="uid://cw438paqjg1bc" path="res://scripts/timer.gd" id="9_85g3d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6xl0"]
 
 [node name="Main" type="Node2D" unique_id=939702465]
 script = ExtResource("1_0wfyh")
@@ -21,17 +28,18 @@ size_flags_vertical = 4
 color = Color(0.508368, 0.7387411, 0.9657386, 0.29411766)
 metadata/_edit_lock_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Game_CanvasLayer" unique_id=1398852376]
-offset_left = 3.0
-offset_top = 535.0
-offset_right = 1154.0
-offset_bottom = 650.0
-mouse_filter = 2
+[node name="Sprite2D" type="Sprite2D" parent="Game_CanvasLayer" unique_id=1447457973]
+position = Vector2(575, 410)
+scale = Vector2(0.08033333, 0.15965883)
+texture = ExtResource("2_tipki")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Game_CanvasLayer" unique_id=1696656157]
+position = Vector2(584, 606.75)
+scale = Vector2(0.29629627, 0.060459945)
 texture = ExtResource("2_sugp2")
-expand_mode = 3
-metadata/_edit_lock_ = true
 
 [node name="UI_CanvasLayer" type="CanvasLayer" parent="." unique_id=449070095]
+script = ExtResource("9_85g3d")
 
 [node name="TextureRect" type="TextureRect" parent="UI_CanvasLayer" unique_id=2085871961]
 offset_left = 3.0
@@ -39,41 +47,52 @@ offset_right = 1148.0
 offset_bottom = 217.0
 texture = ExtResource("3_sugp2")
 expand_mode = 1
-metadata/_edit_lock_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI_CanvasLayer" unique_id=1406519067]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -488.0
-offset_top = 55.0
-offset_right = 570.0
-offset_bottom = 183.0
-grow_horizontal = 2
+[node name="water_progress" type="ProgressBar" parent="UI_CanvasLayer/TextureRect" unique_id=423108328]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 240.0
+offset_right = 410.0
+offset_bottom = 267.0
+theme_override_styles/background = SubResource("StyleBoxTexture_o6xl0")
+show_percentage = false
+script = ExtResource("4_tefeu")
 
-[node name="water" type="TextureButton" parent="UI_CanvasLayer/HBoxContainer" unique_id=278343061]
-layout_mode = 2
+[node name="water" type="Timer" parent="UI_CanvasLayer/TextureRect/water_progress" unique_id=1781031184]
+wait_time = 6.183000000000001
+autostart = true
+
+[node name="water" type="TextureButton" parent="UI_CanvasLayer/TextureRect" unique_id=278343061]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 26.0
+offset_right = 186.0
+offset_bottom = 154.0
+toggle_mode = true
 texture_normal = ExtResource("4_jyhfs")
 
-[node name="trim" type="TextureButton" parent="UI_CanvasLayer/HBoxContainer" unique_id=1237326755]
-layout_mode = 2
-texture_normal = ExtResource("4_jyhfs")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI_CanvasLayer" unique_id=2052411316]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -172.0
-offset_top = 95.0
-offset_right = 218.0
-offset_bottom = 122.0
-grow_horizontal = 2
-
-[node name="growth" type="ProgressBar" parent="UI_CanvasLayer/VBoxContainer" unique_id=423108328]
-layout_mode = 2
-step = 2.0
+[node name="growth_progress2" type="ProgressBar" parent="UI_CanvasLayer/TextureRect" unique_id=2057686823]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 290.0
+offset_right = 410.0
+offset_bottom = 317.0
+theme_override_styles/background = SubResource("StyleBoxTexture_o6xl0")
 value = 100.0
-fill_mode = 1
+show_percentage = false
+script = ExtResource("6_o6xl0")
+
+[node name="Timer" type="Timer" parent="UI_CanvasLayer/TextureRect/growth_progress2" unique_id=368216776]
+wait_time = 5.0
+autostart = true
+
+[node name="trim" type="TextureButton" parent="UI_CanvasLayer/TextureRect" unique_id=1237326755]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 25.0
+offset_right = 331.0
+offset_bottom = 153.0
+texture_normal = ExtResource("4_jyhfs")
 
 [node name="pause" type="TextureButton" parent="UI_CanvasLayer" unique_id=137944954]
 anchors_preset = 1
@@ -83,5 +102,20 @@ offset_left = -128.0
 offset_bottom = 128.0
 grow_horizontal = 0
 texture_normal = ExtResource("4_jyhfs")
+script = ExtResource("5_tbgi4")
 
+[node name="Label" type="Label" parent="UI_CanvasLayer" unique_id=901985839]
+offset_left = 511.0
+offset_top = 79.0
+offset_right = 723.0
+offset_bottom = 102.0
+
+[node name="Timer" type="Timer" parent="UI_CanvasLayer" unique_id=563932643]
+one_shot = true
+
+[connection signal="timeout" from="UI_CanvasLayer/TextureRect/water_progress/water" to="UI_CanvasLayer/TextureRect/water_progress" method="_on_water_timeout"]
+[connection signal="pressed" from="UI_CanvasLayer/TextureRect/water" to="UI_CanvasLayer/TextureRect/water_progress" method="_on_water_pressed"]
+[connection signal="timeout" from="UI_CanvasLayer/TextureRect/growth_progress2/Timer" to="UI_CanvasLayer/TextureRect/growth_progress2" method="_on_timer_timeout"]
+[connection signal="pressed" from="UI_CanvasLayer/TextureRect/trim" to="UI_CanvasLayer/TextureRect/growth_progress2" method="_on_trim_pressed"]
 [connection signal="pressed" from="UI_CanvasLayer/pause" to="." method="_on_pause_pressed"]
+[connection signal="timeout" from="UI_CanvasLayer/Timer" to="." method="_on_timer_timeout"]

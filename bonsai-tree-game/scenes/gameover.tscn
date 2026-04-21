@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cnghexxmstmop"]
+
+[node name="gameover" type="Control" unique_id=1716824059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=927915488]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.0
+offset_top = -216.0
+offset_right = 205.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1884210394]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -63.0
+offset_right = 111.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Game over  a bomb went off "
