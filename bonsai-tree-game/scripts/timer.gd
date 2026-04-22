@@ -4,7 +4,7 @@ extends CanvasLayer
 
 
 func _ready():
-	timer.start(120)
+	timer.start(180)
 
 func _time_left_to_end():
 	var time_left = timer.time_left

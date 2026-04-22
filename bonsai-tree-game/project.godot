@@ -18,6 +18,7 @@ config/icon="res://game assets/icon.svg"
 [autoload]
 
 SaveLoad="*uid://bodsf1j4nghlg"
+SceneTransition="*uid://75u44b8doixs"
 
 [display]
 

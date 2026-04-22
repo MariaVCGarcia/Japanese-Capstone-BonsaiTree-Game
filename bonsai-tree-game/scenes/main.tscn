@@ -55,6 +55,7 @@ offset_top = 240.0
 offset_right = 410.0
 offset_bottom = 267.0
 theme_override_styles/background = SubResource("StyleBoxTexture_o6xl0")
+value = 100.0
 show_percentage = false
 script = ExtResource("4_tefeu")
 
@@ -78,7 +79,6 @@ offset_top = 290.0
 offset_right = 410.0
 offset_bottom = 317.0
 theme_override_styles/background = SubResource("StyleBoxTexture_o6xl0")
-value = 100.0
 show_percentage = false
 script = ExtResource("6_o6xl0")
 
